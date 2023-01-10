@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+ion-menu::part(backdrop) {
+  background-color: rgb(0, 0, 0);
+}
+
+ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;
+
+  box-shadow: 4px 0px 16px rgb(255, 254, 224);
+}

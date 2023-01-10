@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center">RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="medium">
+
+  <form #form="ngForm" (ngSubmit)="onSubmit()" >
+    <ion-card class="ion-padding" class="flex-center">
+      <ion-card-header>
+        <ion-card-title style="font-weight: 1000;">Iniciar Sesión</ion-card-title>
+      </ion-card-header>
+      <ion-item>
+        <ion-label  position="floating">Usuario</ion-label>
+        <ion-input required name="username" [(ngModel)]="user.username" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" required name="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item><br>
+        <ion-button expand="block" class="ion-margin-top" style="font-weight: 1000;" type="submit" [disabled]="form.invalid" >
+          INGRESAR
+        </ion-button>
+        <ion-item href="password">
+          <ion-label class="ion-text-center">Olvidé mi contraseña</ion-label>
+        </ion-item>
+    </ion-card><br>
+    <ion-card>
+      <ion-button expand="block" fill="clear" style="font-weight: 1000;" href="registrar">Crea una cuenta</ion-button>      
+    </ion-card>
+  </form>
+</ion-content> 
+
+
